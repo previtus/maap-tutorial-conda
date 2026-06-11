@@ -9,10 +9,10 @@ Repository Branch:
 main
 
 Run Command:
-gdal_wrapper/run_gdal.sh
+maap-tutorial-conda/run_gdal.sh
 
 Build Command:
-gdal_wrapper/build-env.sh
+maap-tutorial-conda/build-env.sh
 
 General Information
 Algorithm Name: vitek_tutorial_conda_v01
