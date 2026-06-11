@@ -1,0 +1,23 @@
+== NASA MAAP ==
+- follow instructions on https://docs.maap-project.org/en/develop/technical_tutorials/dps_tutorial/dps_tutorial_demo.html
+- here are notes for algorithm registration
+
+Repository URL:
+https://github.com/previtus/maap-tutorial-conda
+
+Repository Branch:
+main
+
+Run Command:
+gdal_wrapper/run_gdal.sh
+
+Build Command:
+gdal_wrapper/build-env.sh
+
+General Information
+Algorithm Name: vitek_tutorial_conda_v01
+Disk Space (GB): 5
+Resource Allocation: maap-dps-worker-8gb
+Container URL: mas.maap-project.org/root/maap-workspaces/2i2c/pangeo:v5.1.0
+    (again could try both here?)
+    (maybe start with the smaller maap_base ?)
