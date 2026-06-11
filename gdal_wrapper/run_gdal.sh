@@ -6,7 +6,9 @@ set -euo pipefail
 # required to be persisted
 
 # Get current location of build script
-basedir=$(dirname "$(readlink -f "$0")")
+basedir=$( cd "$(dirname "$0")" ; pwd -P )
+echo "basedir:"
+echo $basedir
 
 # Create output directory to store outputs.
 # The name is output as required by the DPS.
@@ -38,10 +40,10 @@ reduction_size=$2
 source activate my_env
 
 echo "trying test-imports"
-python ${basedir}/test-imports.py
+python ${basedir}/gdal_wrapper/test-imports.py
 
 # Call the script using the absolute path
 echo "trying gdal_wrapper"
-python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
+python ${basedir}/gdal_wrapper/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
 # conda run --live-stream --name python python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
