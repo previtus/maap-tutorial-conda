@@ -7,13 +7,13 @@ basedir=$( cd "$(dirname "$0")" ; pwd -P )
 echo "basedir:"
 echo $basedir
 
-conda env update -f ${basedir}/gdal_wrapper/environment.yml
+conda env update -f ${basedir}/environment.yml
 
 # later add other libraries ...
 
 source activate my_env
 
-pip install -r ${basedir}/gdal_wrapper/requirements.txt
+pip install -r ${basedir}/requirements.txt
 
 pip install pyogrio
 

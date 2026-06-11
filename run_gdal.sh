@@ -40,10 +40,10 @@ reduction_size=$2
 source activate my_env
 
 echo "trying test-imports"
-python ${basedir}/gdal_wrapper/test-imports.py
+python ${basedir}/test-imports.py
 
 # Call the script using the absolute path
 echo "trying gdal_wrapper"
-python ${basedir}/gdal_wrapper/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
+python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
 # conda run --live-stream --name python python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
